@@ -74,4 +74,10 @@ dependencies {
     mainClassName = 'com.chandy.test.springboot.Application'
 }*/
 
-bootJar.enabled = false
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
