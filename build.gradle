@@ -70,11 +70,6 @@ dependencies {
 
 }
 
-tasks.jar {
-    enabled = false
-}
-
-tasks.bootJar {
-    enabled = true
-    mainClassName = "com.chandy.test.springboot.ApiApplication"
-}
+//bootJar 비활성화시
+bootJar.enabled = false
+jar.enabled = true
