@@ -15,10 +15,7 @@ plugins { // (1)
     id 'org.springframework.boot' version '2.4.1' // RELEASE 삭제
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
-    id 'application'
 }
-
-mainClassName = 'com.chandy.test.springboot.Application'
 
 group 'com.test.springboot'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
@@ -72,3 +69,8 @@ dependencies {
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
 
 }
+
+bootJar {
+    mainClassName = 'com.chandy.test.springboot.Application'
+}
+
