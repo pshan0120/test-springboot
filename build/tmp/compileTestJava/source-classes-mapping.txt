@@ -1,0 +1,10 @@
+com/chandy/test/springboot/web/dto/HelloResponseDtoTest.java
+ com.chandy.test.springboot.web.dto.HelloResponseDtoTest
+com/chandy/test/springboot/domain/posts/PostsRepositoryTest.java
+ com.chandy.test.springboot.domain.posts.PostsRepositoryTest
+com/chandy/test/springboot/web/PostsApiControllerTest.java
+ com.chandy.test.springboot.web.PostsApiControllerTest
+com/chandy/test/springboot/web/HelloControllerTest.java
+ com.chandy.test.springboot.web.HelloControllerTest
+com/chandy/test/springboot/web/IndexControllerTest.java
+ com.chandy.test.springboot.web.IndexControllerTest
