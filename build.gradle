@@ -70,10 +70,10 @@ dependencies {
 
 }
 
-/*bootJar {
+bootJar {
     mainClassName = 'com.chandy.test.springboot.Application'
-}*/
-
+}
+/*
 bootJar {
     enabled = false
 }
@@ -81,7 +81,7 @@ bootJar {
 jar {
     enabled = true
 }
-
+*/
 //bootJar 비활성화시
 /*bootJar.enabled = false
 jar.enabled = true*/
