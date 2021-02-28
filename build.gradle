@@ -17,6 +17,11 @@ plugins { // (1)
     id 'java'
 }
 
+//bootJar 비활성화시
+bootJar.enabled = false
+jar.enabled = true
+
+
 group 'com.test.springboot'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = JavaVersion.VERSION_15
@@ -82,6 +87,3 @@ jar {
     enabled = true
 }*/
 
-//bootJar 비활성화시
-bootJar.enabled = false
-jar.enabled = true
