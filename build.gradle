@@ -74,10 +74,14 @@ dependencies {
     mainClassName = 'com.chandy.test.springboot.Application'
 }*/
 
-bootJar {
+/*bootJar {
     enabled = false
 }
 
 jar {
     enabled = true
-}
+}*/
+
+//bootJar 비활성화시
+bootJar.enabled = false
+jar.enabled = true
