@@ -37,6 +37,7 @@ public class OAuthAttributes {
 
   public static OAuthAttributes ofGoogle(String userNameAttribteName,
       Map<String, Object> attributes) {
+
     return OAuthAttributes.builder()
         .name((String) attributes.get("name"))
         .email((String) attributes.get("email"))
@@ -46,7 +47,8 @@ public class OAuthAttributes {
         .build();
   }
 
-  private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes) {
+  private static OAuthAttributes ofNaver(String userNameAttributeName,
+      Map<String, Object> attributes) {
     Map<String, Object> response = (Map<String, Object>) attributes.get("response");
 
     return OAuthAttributes.builder()
@@ -57,6 +59,7 @@ public class OAuthAttributes {
         .nameAttributeKey(userNameAttributeName)
         .build();
   }
+
 
   // User 엔티티 생성
   // 생성 시점은 처음 가입할 때
