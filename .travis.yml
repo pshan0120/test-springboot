@@ -15,9 +15,12 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+# Permission denied 오류 방지
+before_install:
+  - chmod +x gradlew
+
 # master 브랜치에 푸시되면 수행하는 명령어
 script: "./gradlew clean build"
-
 
 # CI 실행 완료시 메일로 알람
 notifications:
