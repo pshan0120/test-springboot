@@ -18,6 +18,7 @@ cache:
 # master 브랜치에 푸시되면 수행하는 명령어
 script: "./gradlew clean build"
 
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
