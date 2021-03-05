@@ -1,0 +1,8 @@
+# codeDeploy 버전, 프로젝트 버전이 아니라서 다른 버전 쓰면 오류 발생
+version: 0.0
+os: linux
+files:
+  - source: / # codeDeploy에서 전달하는 파일에서 destination으로 이동할 대상 지정, / 이면 전체
+    destination: /home/ec2-user/app/step2/zip/  # 받을 위치
+    overwrite: yes  # 기존 파일 있으면 덮어씌우기
+
