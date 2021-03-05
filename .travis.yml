@@ -32,6 +32,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY  # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY  # Travis repo settings에 설정된 값
     bucket: chandy-springboot-build # S3버킷
+    region: ap-northeast-2
     skip_cleanup: true
     acl: private  # zip파일 접근권한을 private으로
     local_dir: deploy # before_deploy에서 생성한 디렉토리
