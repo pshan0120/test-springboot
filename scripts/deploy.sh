@@ -11,7 +11,9 @@ echo "> 현재 구동중인 애플리케이션 pid 확인"
 
 # 현재 수행 중 스프링부트 PID를 찾고 실행중이면 종료
 # 동일 이름의 프로그램이 있을 수 있기 때문에 jar로 ID를 찾음
-CURRENT_PID=$(pgrep -fl test-springboot | grep jar | awk '{print $1}')
+#CURRENT_PID=$(pgrep -fl test-springboot | grep jar | awk '{print $1}')
+# Amazon Linux2에서 변경되어야 할 부분
+CURRENT_PID=$(pgrep -fl test-springboot | grep java | awk '{print $1}')
 
 echo "현재 구동중인 어플리케이션 pid: $CURRENT_PID"
 

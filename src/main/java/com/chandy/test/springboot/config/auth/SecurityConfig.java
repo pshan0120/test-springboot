@@ -17,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     http
       .csrf().disable().headers().frameOptions().disable()  // h2-console 화면 사용을 위함
     .and()
-      .authorizeRequests()  // 권한별 관리 옵션, authorizeRequests가 선언되어야 antMatchers 사용 가능
+      .authorizeRequests()  // 권한별ㅇㄷ 관리 옵션, authorizeRequests가 선언되어야 antMatchers 사용 가능
       // 권한 관리 대상 지정 옵션, URl 및 HTTP메소드별로 관리 가능
       // 지정된 URl은 전체 열람 권한
       .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
