@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 files:
   - source: / # codeDeploy에서 전달하는 파일에서 destination으로 이동할 대상 지정, / 이면 전체
-    destination: /home/ec2-user/app/step2/zip/  # 받을 위치
+    destination: /home/ec2-user/app/step3/zip/  # 받을 위치
     overwrite: yes  # 기존 파일 있으면 덮어씌우기
 
 permissions:  # codeDeploy에서 EC2로 넘긴 파일들 모두 ec2-user 권한 부여
@@ -13,20 +13,20 @@ permissions:  # codeDeploy에서 EC2로 넘긴 파일들 모두 ec2-user 권한 
     group: ec2-user
 
 hooks:  # codeDeploy 배포 단계에서 실행할 명령어.
-  ApplicationStart:
-      - location: deploy.sh
-        timeout: 60 # 60초 이상 수행되면 실패 처리
-        runas: ec2-user # ec2-user 권한으로 실행하게 함
-
-  #AfterInstall:
-#    - location: stop.sh # 엔진엑스와 연결되어 있지 않은 스프링 부트를 종료합니다.
-#      timeout: 60
-#      runas: ec2-user
   #ApplicationStart:
-#    - location: start.sh # 엔진엑스와 연결되어 있지 않은 Port로 새 버전의 스프링 부트를 시작합니다.
-#      timeout: 60
-#      runas: ec2-user
-#  ValidateService:
-#    - location: health.sh # 새 스프링 부트가 정상적으로 실행됐는지 확인 합니다.
-#      timeout: 60
-#      runas: ec2-user
+#      - location: deploy.sh
+#        timeout: 60 # 60초 이상 수행되면 실패 처리
+#        runas: ec2-user # ec2-user 권한으로 실행하게 함
+
+  AfterInstall:
+    - location: stop.sh # 엔진엑스와 연결되어 있지 않은 스프링 부트를 종료합니다.
+      timeout: 60
+      runas: ec2-user
+  ApplicationStart:
+    - location: start.sh # 엔진엑스와 연결되어 있지 않은 Port로 새 버전의 스프링 부트를 시작합니다.
+      timeout: 60
+      runas: ec2-user
+  ValidateService:
+    - location: health.sh # 새 스프링 부트가 정상적으로 실행됐는지 확인 합니다.
+      timeout: 60
+      runas: ec2-user
